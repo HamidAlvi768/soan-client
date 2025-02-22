@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Submit Complaint - SOAN Garden</title>
+  <meta name="description" content="Submit your complaint to SOAN Garden management.">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .complaint-section {
+      background: url('assets/img/complaint-bg.jpg') center center no-repeat;
+      background-size: cover;
+      padding: 120px 0;
+      min-height: 100vh;
+    }
+
+    .complaint-form {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .complaint-form h2 {
+      color: #fff;
+      background: #14A44D;
+      padding: 15px;
+      margin: -30px -30px 30px -30px;
+      border-radius: 10px 10px 0 0;
+      text-align: center;
+    }
+
+    .complaint-form h2 + p {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .form-control {
+      border: 1px solid #ddd;
+      padding: 8px 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .form-control:focus {
+      border-color: #14A44D;
+      box-shadow: none;
+    }
+
+    .btn-submit {
+      background: #14A44D;
+      color: #fff;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .btn-submit:hover {
+      background: #0f8a3e;
+    }
+
+    .form-label {
+      color: #333;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .property-input::placeholder {
+      text-overflow: ellipsis;
+    }
+    
+    .form-text {
+      font-size: 0.75rem;
+      margin-top: -15px;
+      display: block;
+    }
+    
+    @media (max-width: 768px) {
+      .property-input {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body class="complaint-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">SOAN Garden</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="complaint.html">Submit Complaint</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="complaint-section">
+      <div class="container">
+        <div class="complaint-form">
+          <h2>Submit Complaint</h2>
+          <p>Please fill in the details below to submit your complaint.</p>
+
+          <form action="#" method="POST" id="complaintForm">
+            <div class="row">
+              <div class="col-12 mb-3">
+                <label for="department" class="form-label">Department</label>
+                <select class="form-control" id="department" required>
+                  <option value="">Select Department</option>
+                  <option value="maintenance">Maintenance</option>
+                  <option value="security">Security</option>
+                  <option value="utilities">Utilities</option>
+                  <option value="administration">Administration</option>
+                </select>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <label for="block" class="form-label">Block</label>
+                <input type="text" class="form-control" id="block" placeholder="Enter your block">
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <label for="street" class="form-label">Street</label>
+                <input type="text" class="form-control" id="street" placeholder="Enter your street">
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <label for="property" class="form-label">Property Number</label>
+                <input 
+                  type="text" 
+                  class="form-control property-input" 
+                  id="property" 
+                  placeholder="Enter property no."
+                  title="Enter your plot, house, or property number"
+                >
+                <small class="form-text text-muted">Plot, house, or property number</small>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label for="floor" class="form-label">Floor</label>
+                <input type="text" class="form-control" id="floor" placeholder="Enter floor if any">
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label for="unit" class="form-label">Unit</label>
+                <input type="text" class="form-control" id="unit" placeholder="Enter unit if any">
+              </div>
+
+              <div class="col-12 mb-3">
+                <label for="reference" class="form-label">Reference Number</label>
+                <input type="text" class="form-control" id="reference" placeholder="Enter reference number">
+              </div>
+
+              <div class="col-12 mb-4">
+                <label for="details" class="form-label">Complaint Details</label>
+                <textarea class="form-control" id="details" rows="5" placeholder="Describe your complaint in detail" required></textarea>
+              </div>
+
+              <div class="col-12">
+                <button type="submit" class="btn-submit">Submit Complaint</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-6 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">SOAN Garden</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>SOAN Garden Phase 1</p>
+            <p>Islamabad Expressway, Near PWD Housing Society</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+92 3338246926</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12">
+          <h4>Connect With Us</h4>
+          <p>Join our community forums and stay connected with fellow residents</p>
+          <div class="social-links d-flex">
+            <a href="https://www.facebook.com/groups/453791139268194/" target="_blank" rel="noopener" class="facebook"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1">SOAN Garden</strong> <span>All Rights Reserved</span></p>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html> 
