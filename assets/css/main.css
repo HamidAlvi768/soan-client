@@ -1138,6 +1138,19 @@ section,
   font-weight: 600;
 }
 
+.stats .stats-item .counter-suffix {
+  font-size: 48px;
+  display: inline-block;
+  color: var(--accent-color);
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.stats .stats-item .d-flex {
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
