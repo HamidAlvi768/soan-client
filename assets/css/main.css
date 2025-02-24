@@ -756,8 +756,8 @@ h6 {
   justify-content: center;
   padding: 0;
   margin: 0;
+  color: var(--white-color);
   font-size: 16px;
-  font-weight: 400;
 }
 
 .page-title .breadcrumbs ol li+li {
@@ -769,6 +769,16 @@ h6 {
   display: inline-block;
   padding-right: 10px;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+
+.page-title .breadcrumbs ol li a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
+}
+
+.page-title .breadcrumbs ol li a:hover {
+  color: var(--accent-light);
+  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
