@@ -2612,3 +2612,65 @@ section,
   background-color: var(--accent-color);
   color: var(--contrast-color);
 }
+
+/* Toast Styling */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999999;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.toast {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 15px 25px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  animation: slideIn 0.3s ease-in-out;
+  pointer-events: auto;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.toast.success {
+  background-color: #14A44D;
+}
+
+.toast.error {
+  background-color: #dc3545;
+}
+
+.toast i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
